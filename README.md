@@ -1,4 +1,4 @@
-# mini-base
+# mini-feed-2
 **Reference: https://testdriven.io/courses/auth-flask-react/react-and-docker/**
 
 Basic code for starting a new project
@@ -20,13 +20,8 @@ http://localhost:5001/admin/user/
 # Workflow if you are not using VSCode
 - Build and run: make run
 - Create db and dummy data: make builddb
+- Run worker: make worker
 - Run test: make test
 
-# To copy these to your folder
-- clone this repo
-- `rsync -av --progress mini-base/ <your awesome directory> --exclude .git`
-
 # Features
-- Global cache with Redis
-- A message queue worker
-- Added a sample Mongodb model in models.py
+- A fan out way of creating timeline. Use demo.sh to test it out
