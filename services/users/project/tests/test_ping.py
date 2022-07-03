@@ -2,6 +2,7 @@
 
 
 import json
+from project.api.users.models import Feed
 
 
 def test_ping(test_app):
@@ -11,3 +12,8 @@ def test_ping(test_app):
     assert resp.status_code == 200
     assert "pong" in data["message"]
     assert "success" in data["status"]
+
+def test_feed():
+    f = Feed(content="fdsafdso")
+    f.save()
+    assert str(f.id) == "1"
